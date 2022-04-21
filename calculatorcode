@@ -1,0 +1,139 @@
+# calculator
+def calc():
+    while True:
+        try:
+            print("Type 'exit' to end program.")
+            modes = ["+", "-", "*", "/"]
+            in_1 = int(input("First Number: "))
+            mode = str(input("Select operation (+, -, *, /): "))
+            if mode not in modes:
+                print("Invalid Input")
+                break
+            in_2 = int(input("Second Number: "))
+            state = ""
+            def add():
+                num = in_1 + in_2
+                print(num)
+                state = str(input("Clear?: Y/N "))
+                while state.casefold() == "n":
+                    mode = str(input("Select operation (+, -, *, /): "))
+                    if mode == "+":
+                        cont = int(input("Add number: "))
+                        num = num + cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if mode == "-":
+                        cont = int(input("Subtract number: "))
+                        num = num - cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if mode == "*":
+                        cont = int(input("Multiply by number: "))
+                        num = num * cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if mode == "/":
+                        cont = int(input("Divide by number: "))
+                        num = num / cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if state.casefold() == "y":
+                        num = 0
+            def subtract():
+                num = in_1 - in_2
+                print(num)
+                state = str(input("Clear?: Y/N "))
+                while state.casefold() == "n":
+                    mode = str(input("Select operation (+, -, *, /): "))
+                    if mode == "+":
+                        cont = int(input("Add number: "))
+                        num = num + cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if mode == "-":
+                        cont = int(input("Subtract number: "))
+                        num = num - cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if mode == "*":
+                        cont = int(input("Multiply by number: "))
+                        num = num * cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if mode == "/":
+                        cont = int(input("Divide by number: "))
+                        num = num / cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if state.casefold() == "y":
+                        num = 0
+            def multiplication():
+                num = in_1 * in_2
+                print(num)
+                state = str(input("Clear?: Y/N "))
+                while state.casefold() == "n":
+                    mode = str(input("Select operation (+, -, *, /): "))
+                    if mode == "+":
+                        cont = int(input("Add number: "))
+                        num = num + cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if mode == "-":
+                        cont = int(input("Subtract number: "))
+                        num = num - cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if mode == "*":
+                        cont = int(input("Multiply by number: "))
+                        num = num * cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if mode == "/":
+                        cont = int(input("Divide by number: "))
+                        num = num / cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if state.casefold() == "y":
+                        num = 0
+            def division():
+                num = in_1 / in_2
+                print(num)
+                state = str(input("Clear?: Y/N "))
+                while state.casefold() == "n":
+                    mode = str(input("Select operation (+, -, *, /): "))
+                    if mode == "+":
+                        cont = int(input("Add number: "))
+                        num = num + cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if mode == "-":
+                        cont = int(input("Subtract number: "))
+                        num = num - cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if mode == "*":
+                        cont = int(input("Multiply by number: "))
+                        num = num * cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if mode == "/":
+                        cont = int(input("Divide by number: "))
+                        num = num / cont
+                        print(num)
+                        state = str(input("Clear?: Y/N "))
+                    if state.casefold() == "y":
+                        num = 0
+            if mode == "+":
+                add()
+            if mode == "-":
+                subtract()
+            if mode == "*":
+                multiplication()
+            if mode == "/":
+                division()
+            if state.casefold() == "y":
+                num = 0
+        except ValueError:
+            print("Invalid Input")
+            break
+calc()
