@@ -2,21 +2,26 @@
 def calc():
     while True:
         try:
-            print("Type 'exit' to end program.")
             modes = ["+", "-", "*", "/"]
+            clear = ["y", "n"]
             in_1 = int(input("First Number: "))
             mode = str(input("Select operation (+, -, *, /): "))
             if mode not in modes:
                 print("Invalid Input")
-                break
+                continue
             in_2 = int(input("Second Number: "))
             state = ""
             def add():
                 num = in_1 + in_2
                 print(num)
                 state = str(input("Clear?: Y/N "))
+                if state not in clear:
+                        print("Invalid Input")
                 while state.casefold() == "n":
                     mode = str(input("Select operation (+, -, *, /): "))
+                    if mode not in modes:
+                        print("Invalid Input")
+                        continue
                     if mode == "+":
                         cont = int(input("Add number: "))
                         num = num + cont
@@ -43,8 +48,13 @@ def calc():
                 num = in_1 - in_2
                 print(num)
                 state = str(input("Clear?: Y/N "))
+                if state not in clear:
+                        print("Invalid Input")
                 while state.casefold() == "n":
                     mode = str(input("Select operation (+, -, *, /): "))
+                    if mode not in modes:
+                        print("Invalid Input")
+                        continue
                     if mode == "+":
                         cont = int(input("Add number: "))
                         num = num + cont
@@ -71,8 +81,13 @@ def calc():
                 num = in_1 * in_2
                 print(num)
                 state = str(input("Clear?: Y/N "))
+                if state not in clear:
+                        print("Invalid Input")
                 while state.casefold() == "n":
                     mode = str(input("Select operation (+, -, *, /): "))
+                    if mode not in modes:
+                        print("Invalid Input")
+                        continue
                     if mode == "+":
                         cont = int(input("Add number: "))
                         num = num + cont
@@ -99,8 +114,13 @@ def calc():
                 num = in_1 / in_2
                 print(num)
                 state = str(input("Clear?: Y/N "))
+                if state not in clear:
+                        print("Invalid Input")
                 while state.casefold() == "n":
                     mode = str(input("Select operation (+, -, *, /): "))
+                    if mode not in modes:
+                        print("Invalid Input")
+                        continue
                     if mode == "+":
                         cont = int(input("Add number: "))
                         num = num + cont
@@ -135,5 +155,5 @@ def calc():
                 num = 0
         except ValueError:
             print("Invalid Input")
-            break
+            continue
 calc()
