@@ -1,0 +1,21 @@
+# This is an objectively sound program that provides accurate judgment based on your favorite Star Wars movie. Choose wisely.
+print("Input favorite Star Wars film by Episode Name ONLY")
+movie = input(str("Film: "))
+correct = ["return of the jedi", "empire strikes back", "a new hope", "the force awakens", "revenge of the sith", "rogue one"]
+incorrect = ["attack of the clones", "the phantom menace", "the last jedi", "rise of skywalker", "solo"]
+cartoon = "the clone wars"
+
+
+if movie.casefold() in correct:
+        print("You are amazing and have impeccable taste, well done!")
+
+if movie.casefold() in incorrect:
+        print("That's too bad.")
+
+if movie.casefold() == cartoon:
+        print("Cartoons don't count, even if they're canon.")
+
+
+
+else:
+        print("Invalid Entry, Please Try Again")
