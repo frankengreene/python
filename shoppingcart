@@ -1,0 +1,20 @@
+#Shopping cart test
+money = 50
+shopping_cart = []
+fruits = {"Apple":5, "Raspberry":10, "Lemon":20}
+while True:
+        if money <= 4:
+                print("Can no longer buy.")
+                break
+        else:
+                fruit = input("Which fruit? Apple, Raspberry, or Lemon: ")
+                if fruits[fruit] > money:
+                        print("Can't afford")
+                        print("Final Haul: " + str(shopping_cart))
+                        break
+                shopping_cart.append(fruit)
+                money = money - fruits[fruit]
+                print("Remaining Cash: " + str(money))
+                print("Current cart: " + str(shopping_cart))
+
+
