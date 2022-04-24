@@ -1,0 +1,43 @@
+#app that picks dinner (mood, effort, cost) can choose your take out
+while True:
+    try:
+        key = ["y", "n"]
+        solo = str(input("Welcome to the Eats Executive, do you know what you're in the mood for? (Y/N): "))
+        if solo.casefold() not in key:
+            print("Invalid Input")
+            break
+        if solo.casefold() == "y":
+            print("Then what are you doing here? Go eat!")
+            print("Process Terminated")
+            exit()
+        else:
+            budget = str(input("We understand. Are you on a budget? (Y/N): "))
+            if budget.casefold() == "y":
+                print("Then you should be cookin', fool!")
+                print("Process Terminated")
+                exit()
+            else:
+                energy = int(input("Describe current mood from 1-5 (1 being 'happy' and 5 being 'sad'): "))
+                if energy == 1:
+                    print("Sushi")
+                    option = str(input("Are you satisfied with your option?(Y/N): "))
+
+
+                if energy == 2:
+                    print("Lauren's Chicken")
+
+                if energy == 3:
+                    print("Pizza")
+
+                if energy == 4:
+                    print("Taqueria Los Gueros")
+
+                if energy == 5:
+                    print("Ugly Ramen")
+                else:
+                    print("Invalid Input")
+                    print("Process Terminated")
+                    exit()
+    except TypeError:
+        print("Invalid Input")
+        break
